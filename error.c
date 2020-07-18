@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 12:44:07 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/18 14:45:23 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/18 19:57:34 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,20 @@ int		is_number(char *str)
 	while (str[i])
 	{
 		if (!(str[i] >= '0' && str[i] <= '9'))
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+int		check_valid_dico(char *tab)
+{
+	int i;
+
+	i = 0;
+	while (tab[i])
+	{
+		if (tab[i] == '\t')
 			return (1);
 		i++;
 	}
