@@ -36,5 +36,22 @@ char	**init_key(char **key);
 int		ft_strlen(char *str);
 int		ft_strlendp(char *str);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strlen_a(char *str);
+int		ft_strlen_b(char *str);
+char	*ft_get_a(char *str);
+char	*ft_get_b(char *str);
+char	*ft_get_three(char *nbr);
+int		ft_is_speakable(char *nbr, char **dict);
+int		ft_is_order(char *str);
+int		ft_zero_begin(char *nbr);
+void	ft_hundred(char *nbr, char **dict);
+void	ft_decade(char *nbr, char **dict);
+void	ft_get_decade(char *nbr, char **dict);
+void	ft_unit(char *nbr, char **dict);
+void	ft_say_order(char *nbr, char **dict);
+void	ft_say_three(char *nbr, char **dict);
+void	ft_say(char *nbr, char **dict);
+int		ft_strcmp(char *s1, char *s2);
+void	ft_putchar(char c);
 
 #endif

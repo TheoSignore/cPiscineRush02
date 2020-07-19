@@ -20,6 +20,11 @@ SRC		=	main.c \
 			init_key.c \
 			lib.c \
 			lib2.c \
+			ft_get_str.c \
+			ft_is_speakable.c \
+			ft_say_parts.c \
+			ft_say.c \
+			ft_str_char.c
 
 OBJ		=	$(SRC:.c=.o)
 
