@@ -6,13 +6,13 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 13:12:55 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:14:35 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:44:42 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int			split_tab(char *tab)
+int			split_tab(char *tab, char *nbr)
 {
 	char	**strs;
 	int		len;
@@ -26,6 +26,10 @@ int			split_tab(char *tab)
 			free(strs[len]);
 		return (ft_putstint("Dict Error\n"));
 	}
+	if (ft_is_speakable(nbr, strs) == 0)
+		return (ft_putstint("Dict Error\n"));
+	ft_say(nbr, strs);
+	ft_putchar(8);
 	free(tab);
 	while (strs[++len])
 		free(strs[len]);
@@ -79,7 +83,7 @@ char		*fill_tab(char *dico, char *tab, int len)
 	return (new_tab);
 }
 
-int			ft_open_dico(char *dico)
+int			ft_open_dico(char *dico, char *nbr)
 {
 	int		file;
 	char	buff;
@@ -101,6 +105,6 @@ int			ft_open_dico(char *dico)
 		free(tab);
 		return (1);
 	}
-	return (split_tab(tab));
+	return (split_tab(tab, nbr));
 	return (0);
 }

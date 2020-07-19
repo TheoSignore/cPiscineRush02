@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 11:16:49 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:10:10 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:43:43 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,14 @@ int			main(int ac, char **av)
 		return (1);
 	if (ac == 2)
 	{
-		if (ft_open_dico("numbers.dict.txt") == 1)
+		if (ft_open_dico("numbers.dict.txt", av[1]) == 1)
 			return (ft_putstint("Error\n"));
 	}
 	if (ac == 3)
 	{
-		if (ft_open_dico(av[1]) == 1)
+		if (ft_open_dico(av[1], av[2]) == 1)
 			return (ft_putstint("Error\n"));
 	}
+	
 	return (0);
 }
