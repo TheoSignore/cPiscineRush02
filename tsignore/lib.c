@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 14:45:29 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:00:32 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 18:50:13 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ int					ft_strlen(char *str)
 		i++;
 	return (i);
 }
-
 int					ft_strncmp(char *s1, char *s2, unsigned int n)
 {
 	unsigned int	i;

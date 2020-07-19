@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_char.c                                      :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/19 17:26:37 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 21:19:33 by tsignore         ###   ########.fr       */
+/*   Created: 2020/07/13 11:16:49 by phbarrad          #+#    #+#             */
+/*   Updated: 2020/07/19 22:10:10 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	ft_putchar(char c)
+int			main(int ac, char **av)
 {
-	write(1, &c, 1);
-}
-
-int		ft_strcmp(char *s1, char *s2)
-{
-	int i;
-	int s1_len;
-	int s2_len;
-
-	i = 0;
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	while (i <= s1_len && i <= s2_len)
+	if (ft_error(ac, av) == 0)
+		return (1);
+	if (ac == 2)
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+		if (ft_open_dico("numbers.dict.txt") == 1)
+			return (ft_putstint("Error\n"));
+	}
+	if (ac == 3)
+	{
+		if (ft_open_dico(av[1]) == 1)
+			return (ft_putstint("Error\n"));
 	}
 	return (0);
 }

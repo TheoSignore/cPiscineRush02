@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 14:58:37 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:14:38 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 19:35:52 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,8 @@ char		**fill_key(char **key)
 
 char		**init_key(char **key)
 {
+	if (!(key = malloc(sizeof(char *) * (42))))
+		return (NULL);
 	key[0] = ft_strdup("0");
 	key[1] = ft_strdup("1");
 	key[2] = ft_strdup("2");

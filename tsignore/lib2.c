@@ -6,21 +6,13 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 20:04:47 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 21:59:47 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:19:04 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int			ft_putstint(char *str)
-{
-	int i;
-
-	i = -1;
-	while (str[++i])
-		write(1, &(str[i]), 1);
-	return (0);
-}
+#include <stdlib.h>
 
 int			is_inchar(char cmp, char *charset)
 {
