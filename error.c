@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 12:44:07 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/18 19:57:34 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 19:38:11 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,39 @@ int		is_number(char *str)
 	return (0);
 }
 
+int		is_not(char *key, char **strs)
+{
+	int i;
+
+	i = -1;
+	while (strs[++i])
+	{
+		if (ft_strncmp(key, strs[i], ft_strlen(key)) == 0)
+			return (1);
+	}
+	return (0);
+}
+
+int			check_valid_strs(char **strs)
+{
+	int		i;
+	int		x;
+	char	**key;
+	
+	x = -1;
+	i = -1;
+	key = init_key(key);
+	while (key[++i])
+	{
+		if (is_not(key[i], strs) == 0)
+			return (1);
+	}
+	printf("Valid\n");
+	while (key[++x])
+		free(key[x]);
+	return (0);
+}
+
 int		check_valid_dico(char *tab)
 {
 	int i;
@@ -41,7 +74,7 @@ int		check_valid_dico(char *tab)
 	i = 0;
 	while (tab[i])
 	{
-		if (tab[i] == '\t')
+		if (tab[i] == '\t' || tab[i] == '\v' || tab[i] == '\f' || tab[i] == '\r')
 			return (1);
 		i++;
 	}

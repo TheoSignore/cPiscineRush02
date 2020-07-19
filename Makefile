@@ -6,7 +6,7 @@
 #    By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/10 14:02:10 by phbarrad          #+#    #+#              #
-#    Updated: 2020/07/18 20:07:30 by phbarrad         ###   ########.fr        #
+#    Updated: 2020/07/19 17:05:33 by phbarrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@ NAME	=	rush-02
 CFLAGS	=	
 RM		=	rm -rf
 SRC		=	phmain.c \
-			display.c \
+			split_dico.c \
 			error.c \
+			init_key.c \
 			lib.c \
 			lib2.c \
-			lib3.c \
 
 OBJ		=	$(SRC:.c=.o)
 
