@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 13:12:55 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:56:12 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 23:29:15 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char		*fill_new(char *new_tab, char *tab, int x)
 			x--;
 		else if (tab[i] == ' ' && tab[i + 1] == ':')
 			x--;
-		else if (tab[i] == ' ' && is_nu(tab[i + 1]) == 1)
+		else if (i > 0 && tab[i] == '\n' && tab[i + 1] == ' ')
 			x--;
 		else if (i > 0 && tab[i - 1] != ' ' && tab[i] == '\n')
 		{
