@@ -6,11 +6,18 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 14:45:29 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/18 15:42:37 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:35:27 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
+
+int		is_nu(char c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
+}
 
 void	ft_putstr(char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/13 11:16:49 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/18 19:57:32 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:38:56 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,17 @@ char		*fill_tab(char *tab, int len)
 			i--;
 		else if (tab[i-1] == ' ' && tab[i] == ' ')
 			i--;
-		if (tab[i-1] == '\n' && tab[i] == '\n')
+		else if (tab[i-1] == '\n' && tab[i] == '\n')
+			i--;
+		else if (tab[i-1] == ':' && tab[i] == ' ')
+			i--;
+		else if (is_nu(tab[i-1]) == 1 && tab[i] == ' ')
+			i--;
+		else if (tab[i] == ' ' && tab[i + 1] == '\n')
 			i--;
 		i++;
 	}
 	close(file);
-	ft_putstr(tab);
 	return (tab);
 }
 
@@ -43,7 +48,6 @@ int			ft_open_dico(char *str, char **av)
 	int		dir;
 	int		i;
 	char	*tab;
-
 
 	i = 0;
 	file = open("numbers.dict.txt", O_RDONLY);
@@ -57,7 +61,7 @@ int			ft_open_dico(char *str, char **av)
 	tab = fill_tab(tab, i);
 	if (check_valid_dico(tab) == 1)
 		return (1);
-	return (split_tab(str, av));
+	return (split_tab(tab, av));
 }
 
 int			main(int ac, char **av)

@@ -6,13 +6,20 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 19:58:23 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/18 20:01:46 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/18 20:32:23 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int		split_tab(char *str, char **av)
+int		split_tab(char *tab, char **av)
 {
+	char **strs;
+
+	strs = ft_split(tab, "\n");
+
+	int x = -1;
+	while (strs[++x])
+		printf("[%s]\n", strs[x]);
 	return (0);
 }
