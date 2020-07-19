@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 13:12:55 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:46:28 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:56:12 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int			split_tab(char *tab, char *nbr)
 
 	len = -1;
 	strs = ft_split(tab, "\n");
-	if (check_valid_strs(strs) == 1)
+	if (check_valid_strs(strs) == 1 || check_tab(strs) == 1)
 	{
 		free(tab);
 		while (strs[++len])
@@ -30,6 +30,7 @@ int			split_tab(char *tab, char *nbr)
 		return (ft_putstint("Dict Error\n"));
 	ft_say(nbr, strs);
 	ft_putchar(8);
+	ft_putchar('\n');
 	free(tab);
 	while (strs[++len])
 		free(strs[len]);

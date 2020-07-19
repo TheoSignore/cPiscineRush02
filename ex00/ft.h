@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 13:34:48 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:50:58 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:53:29 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ void	ft_say_three(char *nbr, char **dict);
 void	ft_say(char *nbr, char **dict);
 int		ft_strcmp(char *s1, char *s2);
 void	ft_putchar(char c);
+int		check_tab(char **tab);
 
 #endif

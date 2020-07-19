@@ -6,7 +6,7 @@
 #    By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/10 14:02:10 by phbarrad          #+#    #+#              #
-#    Updated: 2020/07/19 22:16:03 by phbarrad         ###   ########.fr        #
+#    Updated: 2020/07/19 22:55:20 by tsignore         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ RM		=	rm -rf
 SRC		=	main.c \
 			split_dico.c \
 			error.c \
+			errordict.c \
 			init_key.c \
 			lib.c \
 			lib2.c \
