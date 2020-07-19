@@ -6,13 +6,13 @@
 #    By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/10 14:02:10 by phbarrad          #+#    #+#              #
-#    Updated: 2020/07/19 17:05:33 by phbarrad         ###   ########.fr        #
+#    Updated: 2020/07/19 22:06:56 by phbarrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		=	gcc
 NAME	=	rush-02
-CFLAGS	=	
+CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -rf
 SRC		=	phmain.c \
 			split_dico.c \

@@ -6,15 +6,15 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 13:12:55 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 20:22:34 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:14:35 by phbarrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-int		split_tab(char *tab, char **av)
+int			split_tab(char *tab)
 {
-	char **strs;
+	char	**strs;
 	int		len;
 
 	len = -1;
@@ -24,15 +24,40 @@ int		split_tab(char *tab, char **av)
 		free(tab);
 		while (strs[++len])
 			free(strs[len]);
-		return (ft_putstint("Error\n"));
+		return (ft_putstint("Dict Error\n"));
 	}
-//	int x = -1;
-//	while (strs[++x])
-//		printf("[%s]\n", strs[x]);
 	free(tab);
 	while (strs[++len])
 		free(strs[len]);
 	return (0);
+}
+
+char		*fill_new(char *new_tab, char *tab, int x)
+{
+	int		i;
+
+	i = -1;
+	while (tab[i + 1] && ++i > -2 && ++x > -2)
+	{
+		new_tab[x] = tab[i];
+		if (tab[i] == ' ' && tab[i + 1] == ' ')
+			x--;
+		else if (tab[i] == '\n' && tab[i + 1] == '\n')
+			x--;
+		else if (tab[i] == ' ' && tab[i + 1] == ':')
+			x--;
+		else if (tab[i] == ' ' && is_nu(tab[i + 1]) == 1)
+			x--;
+		else if (i > 0 && tab[i - 1] != ' ' && tab[i] == '\n')
+		{
+			new_tab[x] = ' ';
+			new_tab[++x] = '\n';
+		}
+	}
+	new_tab[x] = tab[i];
+	new_tab[++x] = ' ';
+	new_tab[++x] = '\0';
+	return (new_tab);
 }
 
 char		*fill_tab(char *dico, char *tab, int len)
@@ -41,9 +66,7 @@ char		*fill_tab(char *dico, char *tab, int len)
 	int		i;
 	int		file;
 	char	*new_tab;
-	int		x;
 
-	x = 0;
 	i = -1;
 	file = open(dico, O_RDONLY);
 	if (!(new_tab = malloc(sizeof(char) * (len * 2))))
@@ -51,41 +74,15 @@ char		*fill_tab(char *dico, char *tab, int len)
 	while ((read(file, &buff, 1)))
 		tab[++i] = buff;
 	tab[i] = '\0';
-	i = 0;
-	while (tab[i + 1])
-	{
-		new_tab[x] = tab[i];
-		while (tab[i] == ' ' && tab[i + 1] == ' ')
-			i++;
-		/*if (tab[i - 1] == '\n' && tab[i] == ' ')
-			i++;
-		else if (tab[i - 1] == ' ' && tab[i] == ' ')
-			i++;
-		else if (tab[i - 1] == '\n' && tab[i] == '\n')
-			i++;
-		else if (tab[i - 1] == ':' && tab[i] == ' ')
-			i++;
-		else if (is_nu(tab[i - 1]) == 1 && tab[i] == ' ')
-			i++;
-		else if (tab[i - 1] != ' ' && tab[i] == '\n')
-		{
-			tab[i] = ' ';
-			tab[++i] = '\n';
-		}*/
-		x++;
-		i++;
-	}
-	new_tab[i] = '\0';
-	printf("[%s]", new_tab);
+	new_tab = fill_new(new_tab, tab, -1);
 	close(file);
-	return (tab);
+	return (new_tab);
 }
 
-int			ft_open_dico(char *dico, char **av)
+int			ft_open_dico(char *dico)
 {
 	int		file;
 	char	buff;
-	int		dir;
 	int		i;
 	char	*tab;
 
@@ -104,6 +101,6 @@ int			ft_open_dico(char *dico, char **av)
 		free(tab);
 		return (1);
 	}
-	return (split_tab(tab, av));
+	return (split_tab(tab));
 	return (0);
 }

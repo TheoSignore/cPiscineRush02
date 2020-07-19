@@ -6,7 +6,7 @@
 5: five
 6: six
 7: seven
-8: eight
+8: eight 7 8
 9: nine
 10: ten
 11: eleven
