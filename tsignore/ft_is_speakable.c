@@ -6,7 +6,7 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 18:31:04 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 20:55:20 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:33:52 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,11 @@ int		ft_is_order(char *str)
 	else
 		return (0);
 	return (1);
+}
+
+int		ft_zero_begin(char *nbr)
+{
+	if(nbr[0] == '0' && ft_strlen(nbr) != 1)
+		return (1);
+	return (0);
 }

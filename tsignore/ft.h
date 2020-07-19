@@ -6,7 +6,7 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 17:19:41 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 20:54:35 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:33:56 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ int		check_valid_dico(char *tab);
 int		check_valid_strs(char **strs);
 int		ft_is_speakable(char *nbr, char **dict);
 int		ft_is_order(char *str);
+int		ft_zero_begin(char *nbr);
 
 #endif
