@@ -6,7 +6,7 @@
 #    By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/10 14:02:10 by phbarrad          #+#    #+#              #
-#    Updated: 2020/07/19 22:06:56 by phbarrad         ###   ########.fr        #
+#    Updated: 2020/07/19 22:16:03 by phbarrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ CC		=	gcc
 NAME	=	rush-02
 CFLAGS	=	-Wall -Wextra -Werror
 RM		=	rm -rf
-SRC		=	phmain.c \
+SRC		=	main.c \
 			split_dico.c \
 			error.c \
 			init_key.c \
