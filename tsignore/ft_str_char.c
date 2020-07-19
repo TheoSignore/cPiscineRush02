@@ -6,7 +6,7 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 17:26:37 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 17:30:59 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 20:15:18 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,6 @@
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
 }
 
 int		ft_strlen(char *str)
