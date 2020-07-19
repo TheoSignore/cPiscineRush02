@@ -6,11 +6,11 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 17:37:34 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 17:39:50 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 20:34:40 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "ft.h"
 
 void	ft_hundred(char *nbr, char **dict)
 {

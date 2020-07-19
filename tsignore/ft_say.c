@@ -6,11 +6,11 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 16:02:27 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 17:44:28 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 20:34:23 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "ft.h"
 
 void	ft_say_three(char *nbr, char **dict)
 {
