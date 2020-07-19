@@ -6,7 +6,7 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 18:31:04 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 21:33:52 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:50:25 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int		ft_is_speakable(char *nbr, char **dict)
 {
 	int i;
-	int j;
 	int nbr_len;
 	int limit;
 	int boolean;

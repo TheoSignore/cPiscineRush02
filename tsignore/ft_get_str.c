@@ -6,7 +6,7 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 17:31:56 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 21:21:05 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 21:46:17 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int		ft_strlen_b(char *str)
 
 	i = ft_strlen_a(str) + 1;
 	size = 0;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
 	while (str[i])
 	{
 		size++;
@@ -58,7 +60,12 @@ char	*ft_get_a(char *str)
 
 char	*ft_get_b(char *str)
 {
-	return (&str[ft_strlen_a(str) + 1]);
+	int i;
+
+	i = ft_strlen_a(str) + 1;
+	while (str[i] == ' ' || str[i] == '\t')
+		i++;
+	return (&str[i]);
 }
 
 char	*ft_get_three(char *nbr)

@@ -6,7 +6,7 @@
 #    By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/07/10 14:02:10 by phbarrad          #+#    #+#              #
-#    Updated: 2020/07/19 21:25:29 by tsignore         ###   ########.fr        #
+#    Updated: 2020/07/19 17:05:33 by phbarrad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,11 +20,6 @@ SRC		=	phmain.c \
 			init_key.c \
 			lib.c \
 			lib2.c \
-			ft_say.c \
-			ft_say_parts.c \
-			ft_str_char.c \
-			ft_get_str.c
-
 
 OBJ		=	$(SRC:.c=.o)
 
