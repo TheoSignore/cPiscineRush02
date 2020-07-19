@@ -6,11 +6,11 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 17:26:37 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 20:15:18 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 20:34:54 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "ft.h"
 
 void	ft_putchar(char c)
 {

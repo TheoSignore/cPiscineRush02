@@ -6,11 +6,11 @@
 /*   By: tsignore <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/19 17:31:56 by tsignore          #+#    #+#             */
-/*   Updated: 2020/07/19 17:36:19 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 20:34:06 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib.h"
+#include "ft.h"
 
 int		ft_strlen_a(char *str)
 {
