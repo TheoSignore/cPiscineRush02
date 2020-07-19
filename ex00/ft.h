@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 13:34:48 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:43:17 by tsignore         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:50:58 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ char	*ft_get_b(char *str);
 char	*ft_get_three(char *nbr);
 int		ft_is_speakable(char *nbr, char **dict);
 int		ft_is_order(char *str);
-int		ft_zero_begin(char *nbr);
 void	ft_hundred(char *nbr, char **dict);
 void	ft_decade(char *nbr, char **dict);
 void	ft_get_decade(char *nbr, char **dict);

@@ -6,7 +6,7 @@
 /*   By: phbarrad <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 12:44:07 by phbarrad          #+#    #+#             */
-/*   Updated: 2020/07/19 22:12:50 by phbarrad         ###   ########.fr       */
+/*   Updated: 2020/07/19 22:51:10 by tsignore         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int			is_number(char *str)
 			return (1);
 		i++;
 	}
+	if(str[0] == '0' && ft_strlen(str) != 1)
+		return (1);
 	return (0);
 }
 
